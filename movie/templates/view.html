@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h3>Movie details</h3>
+<div class="row>">
+
+     <div class="col-sm-4 " >
+<div class="card" style="width:30rem;">
+  <img src="{{m.image.url}}" class="card-img-top" height="200px" width="100%" alt="...">
+  <div class="card-body">
+      <p class="card-id">{{m.id}}</p>
+    <h5 class="card-title">{{m.name}}</h5>
+    <p class="card-text">{{m.desc}}</p>
+      <p class="card-text">{{m.year}}</p>
+    <a href="{% url 'cards1:update' m.id %}" class="btn btn-primary">Update</a>
+      <a href="{% url 'cards1:delete' m.id %}" class="btn btn-primary">Delete</a>
+  </div>
+</div>
+</div>
+
+    </div>
+{% endblock %}
